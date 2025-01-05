@@ -24,7 +24,7 @@ export class ActiveConsultationTableComponent implements OnInit {
       petBreed: 'Dog - Golden Retriever',
       petParent: data.petParent,
       phone: '856856585',
-      timeSlot: data.timeSlot,
+      timeSlot: this.convertTo12HourFormat(data.timeSlot),
       tokenId: 'Token - 1',
       doctorName: data.doctorName,
       type: data.type,
@@ -32,6 +32,15 @@ export class ActiveConsultationTableComponent implements OnInit {
     }
     this.dataSource.push(newData);
     this.table.renderRows()
+  }
+
+  convertTo12HourFormat(time24: string): string {
+    const [hour, minute] = time24.split(':').map(Number);
+    const suffix = hour >= 12 ? 'PM' : 'AM';
+    let hour12 = hour % 12;
+    if (hour12 === 0) hour12 = 12;
+    const formattedMinute = minute < 10 ? `0${minute}` : minute;
+    return `${hour12}:${formattedMinute} ${suffix}`;
   }
 
   displayedColumns: string[] = ['timeSlot', 'petInfo', 'petParent', 'doctor', 'status'];

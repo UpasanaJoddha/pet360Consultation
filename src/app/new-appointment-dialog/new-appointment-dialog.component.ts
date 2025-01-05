@@ -17,14 +17,10 @@ export class NewAppointmentDialogComponent implements OnInit {
 
     this.userForm = this.formBuilder.group({
       petName: ['', Validators.required],
-      //petBreed: ['', [Validators.required, Validators.email]],
       petParent: ['', Validators.required],
-      //phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
       doctorName: ['', [Validators.required]],
       type: ['', Validators.required],
       timeSlot: [''],
-      //tokenId:[''],
-      //status:[]
     });
   }
   submitForm(){
