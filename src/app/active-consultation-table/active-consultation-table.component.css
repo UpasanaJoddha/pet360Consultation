@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+.subInfo{
+  color: #0000008c;
+}
+p{
+  margin: 5px;
+}
+.count{
+  height: 6vh;
+  background-color: #e2e2e2ad;
+  color: black;
+  display: flex;
+  align-items: center;
+  /* font-weight: 450; */
+}
+.Upcoming{
+  background-color: #ffdee4d1;
+  color: #fb6580;
+}
+.inProgress{
+  background-color: #ffecc9d6;
+  color: #ff8b00;
+}
+.Ongoing{
+  background-color: #d2d2ffde;
+  color: #5252fa;
+}
+.Completed{
+  background-color: #c7ffc7de;
+  color: green;
+}

@@ -1,0 +1,22 @@
+<div class="side-nav">
+  <div class="tool-bar">
+    <span class="title"><p style="font-weight: 500;">pet</p><p style="font-weight: 550;color: orangered;">360</p></span>
+  </div>
+  <div class="side-nav-content">
+    <mat-list role="list">
+      <mat-list-item *ngFor="let item of listContent" [class]="item.name=='Consultations'?'activeTab':'inActiveTab'">
+        <mat-icon matListItemIcon style="margin-right: 10px;">{{item.icon}}</mat-icon>
+      <div matListItemTitle>{{item.name}}</div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="bottom-tool-bar">
+    <div>
+      <p>Paws Elite Plan</p>
+      <p>Expiring 31 Aug 24'</p>
+    </div>
+    <div style="color: red;">
+      <mat-icon>exit_to_app</mat-icon>
+    </div>
+  </div>
+</div>

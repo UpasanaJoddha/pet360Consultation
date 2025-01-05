@@ -1,0 +1,33 @@
+.rowDiv{
+display: flex;
+}
+.dialog-header{
+  display: flex
+  ;
+      flex-direction: row;
+      justify-content: space-between;
+}
+.colSpan{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  margin-bottom: 2px;
+}
+mat-form-field{
+  width: 17vw;
+}
+label{
+  margin-bottom: 5px;
+}
+.submitBtn{
+  background-color: #0d83f7;
+  color: white;
+  border-radius: 20px;
+  width: 10vw;
+}
+.btnDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

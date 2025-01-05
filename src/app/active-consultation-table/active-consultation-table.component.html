@@ -1,0 +1,31 @@
+<div>
+  <div class="count">
+    <p style="padding-left: 24px;">{{dataSource.length}} active consultations</p>
+  </div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="timeSlot">
+      <th mat-header-cell *matHeaderCellDef> Time Slot </th>
+      <td mat-cell *matCellDef="let element"><p>{{element.timeSlot}}</p><p class="subInfo">{{element.tokenId}}</p> </td>
+    </ng-container>
+    <ng-container matColumnDef="petInfo">
+      <th mat-header-cell *matHeaderCellDef> Pet Info </th>
+      <td mat-cell *matCellDef="let element">
+         <p> {{element.petName}}</p><p class="subInfo">{{element.petBreed}}</p>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="petParent">
+      <th mat-header-cell *matHeaderCellDef> Pet Parent </th>
+      <td mat-cell *matCellDef="let element"> <p>{{element.petParent}}</p><p class="subInfo">{{element.phone}}</p> </td>
+    </ng-container>
+    <ng-container matColumnDef="doctor">
+      <th mat-header-cell *matHeaderCellDef> doctor </th>
+      <td mat-cell *matCellDef="let element"> <p>{{element.doctorName}}</p><p class="subInfo">{{element.type}}</p> </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"><button mat-flat-button [class]="element.status=='In progress'?'inProgress':element.status">{{element.status}}</button></td>
+    </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

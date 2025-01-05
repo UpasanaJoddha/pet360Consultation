@@ -1,0 +1,9 @@
+.main-container{
+  height: 100%;
+  position: relative;}
+.tool-bar{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,77 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>Schedule Appointment</h2>
+  <button mat-icon-button>
+<mat-icon (click)="this.dialogRef.close()">close</mat-icon>
+</button>
+</div>
+<!-- <mat-dialog-content> -->
+  <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+
+    <div class="rowDiv">
+      <span class="colSpan">
+        <label>Pet Parent</label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="eg. Ellen Miller" formControlName="petParent">
+        </mat-form-field>
+      </span>
+      <span class="colSpan">
+      <label >Pet</label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="eg. Milo" formControlName="petName">
+      </mat-form-field>
+      </span>
+    </div>
+
+    <div class="rowDiv">
+      <span class="colSpan">
+      <label >Date</label>
+      <mat-form-field appearance="outline">
+        <input matInput >
+        </mat-form-field>
+    </span>
+
+      <span class="colSpan">
+      <label >Time</label>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="timeSlot">
+      </mat-form-field>
+    </span>
+    </div>
+
+    <div class="rowDiv">
+      <span class="colSpan">
+      <label >Doctor</label>
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="DR. Ellen Miller" formControlName="doctorName">
+          <mat-option value="Dr. Jess Harris">Dr. Jess Harris</mat-option>
+          <mat-option value="Dr. Mil">Dr. Mil</mat-option>
+          <mat-option value="Dr. Ram">Dr. Ram</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </span>
+
+      <span class="colSpan">
+      <label >Purpose of visit</label>
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="eg. Check up" formControlName="type">
+          <mat-option value="Check-Up">Check Up</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </span>
+    </div>
+
+    <div class="rowDiv">
+      <span class="colSpan" style="width: 100%;">
+      <label >Primary Complaint (Optional)</label>
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <textarea placeholder="Type here" matInput></textarea>
+      </mat-form-field>
+    </span>
+    </div>
+
+    <div class="btnDiv">
+      <button mat-flat-button class="submitBtn" type="submit">Schedule now</button>
+    </div>
+  </form>
+<!-- </mat-dialog-content> -->

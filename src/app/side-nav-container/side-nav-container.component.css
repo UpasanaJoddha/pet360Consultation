@@ -1,0 +1,39 @@
+.side-nav{
+height: 100%;
+position: relative;
+}
+.bottom-tool-bar{
+  position: absolute;
+  bottom: 0;
+  border-top: #c9c9c9;
+  border-top-style: dashed;
+  height: 10%;
+  width: 100%;
+}
+.side-nav-content{
+  color: #606060e3;
+  margin: 10px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+mat-list-item{
+  margin: 5px;
+  width: 95% !important;
+}
+.activeTab{
+  background-color: #ebebeb;
+  border-radius: 5px;
+  border-left: 6px #0d83f7 solid;
+  font-weight: 500;
+}
+.inActiveTab{
+color: #00000096;
+}
+.title{
+  margin-left: 15px;
+    display: flex;
+    font-size: 22px;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}

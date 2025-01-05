@@ -1,0 +1,16 @@
+<div class="consultaions">
+<div class="header-section">
+  <h3 style="font-weight: 450;">CONSULTATIONS</h3>
+  <button class="newBtn" mat-raised-button (click)="openDialog()">Schedule Now</button>
+</div>
+<div class="table-section">
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Active"> <app-active-consultation-table [newConsultation]="dataFromDialog"></app-active-consultation-table> </mat-tab>
+        <mat-tab label="Completed" disabled="true"> Content 2 </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>
