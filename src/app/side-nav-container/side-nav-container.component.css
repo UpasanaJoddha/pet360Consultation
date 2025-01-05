@@ -5,7 +5,7 @@ position: relative;
 .bottom-tool-bar{
   position: absolute;
   bottom: 0;
-  border-top: #c9c9c9;
+  border-top: #6c6c6c22;
   border-top-style: dashed;
   height: 10%;
   width: 100%;
@@ -36,4 +36,14 @@ color: #00000096;
     align-items: flex-end;
     width: 100%;
     height: 100%;
+}
+.bottom-pTag{
+  margin: 2px !important;
+}
+.bottom-tool-bar{
+  /* width: 95%; */
+  display: flex
+;
+    justify-content: space-between;
+    align-items: center;
 }
